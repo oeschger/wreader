@@ -36,4 +36,4 @@ load_plugin_textdomain( TEXTDOMAIN, FALSE, TEXTDOMAIN . '/languages' );
 
 namespace WReader\Settings;
 
-const HANDLE = 'multi_feed_reader_handle';
+const HANDLE = 'wreader_handle';

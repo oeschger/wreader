@@ -156,8 +156,8 @@ function initialize() {
 
 			<div class="inner-sidebar">
 
-				<?php display_creator_metabox(); ?>
-                <?php display_help_metabox( $tabs ); ?>
+				<!--?php display_creator_metabox(); ?-->
+                <!--?php display_help_metabox( $tabs ); ?-->
 				<!-- ... more boxes ... -->
 
 			</div> <!-- .inner-sidebar -->
