@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Multi Feed Reader
-Plugin URI: https://github.com/eteubert/multi-feed-reader
-Description: Reads multiple feeds. Output can be customized via templates. Is displayed via Shortcodes.
-Version: 2.2.4
-Author: Eric Teubert
-Author URI: ericteubert@googlemail.com
+Plugin Name: WReader
+Plugin URI: https://github.com/oeschger/wreader
+Description: Organizes your feeds and writes out a custom RSS
+Version: 1.0.0
+Author: Ian Oeschger and Jamie Pickett
+Author URI: ian@brownhen.com
 License: MIT
 */
 
