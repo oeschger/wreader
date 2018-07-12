@@ -1,13 +1,13 @@
 <?php
-namespace MultiFeedReader;
+namespace WReader;
 
 /**
  * A helper class to manage tabs in options pages.
  * 
  * Example:
  *   $tabs = new Tabs;
- *   $tabs->set_tab( 'edit', __( 'Edit Templates', 'multi-feed-reader' ) );
- *   $tabs->set_tab( 'add', __( 'Add Templates', 'multi-feed-reader' ) );
+ *   $tabs->set_tab( 'edit', __( 'Edit Templates', 'wreader' ) );
+ *   $tabs->set_tab( 'add', __( 'Add Templates', 'wreader' ) );
  *   $tabs->set_default( 'edit' );
  *   $tabs->display();
  * 

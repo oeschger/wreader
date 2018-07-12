@@ -1,5 +1,5 @@
 <?php
-namespace MultiFeedReader\Parser;
+namespace WReader\Parser;
 
 /**
  * Parses the given template.

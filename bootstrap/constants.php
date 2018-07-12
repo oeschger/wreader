@@ -1,5 +1,5 @@
 <?php
-namespace MultiFeedReader;
+namespace WReader;
 
 /**
  * Conventions
@@ -34,6 +34,6 @@ define( 'PLUGIN_NAME', get_plugin_header( 'Name' ) );
 define( 'TEXTDOMAIN', strtolower( str_replace( ' ', '-', PLUGIN_NAME ) ) );
 load_plugin_textdomain( TEXTDOMAIN, FALSE, TEXTDOMAIN . '/languages' );
 
-namespace MultiFeedReader\Settings;
+namespace WReader\Settings;
 
 const HANDLE = 'multi_feed_reader_handle';

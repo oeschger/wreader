@@ -1,5 +1,5 @@
 <?php
-namespace MultiFeedReader;
+namespace WReader;
 
 /**
  * @author   <dh@squidcode.com>

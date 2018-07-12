@@ -7,7 +7,7 @@ function mfr_autoloader( $class_name ) {
 	$plugin = array_shift( $split ); 
 	
 	// only load classes prefixed with <Plugin> namespace
-	if ( $plugin != "MultiFeedReader" )
+	if ( $plugin != "WReader" )
 		return false;
 	
 	// class name without namespace

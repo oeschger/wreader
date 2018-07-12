@@ -1,15 +1,15 @@
 <?php
-namespace MultiFeedReader;
+namespace WReader;
 
 register_activation_hook(   PLUGIN_FILE, __NAMESPACE__ . '\activate' );
 register_deactivation_hook( PLUGIN_FILE, __NAMESPACE__ . '\deactivate' );
 register_uninstall_hook(    PLUGIN_FILE, __NAMESPACE__ . '\uninstall' );
 
-function initialize() {	
-	add_shortcode( SHORTCODE, 'MultiFeedReader\shortcode' );
-	add_action( 'admin_menu', 'MultiFeedReader\add_menu_entry' );
+function initialize() {
+	add_shortcode( SHORTCODE, 'WReader\shortcode' );
+	add_action( 'admin_menu', 'WReader\add_menu_entry' );
 }
-add_action( 'plugins_loaded', 'MultiFeedReader\initialize' );
+add_action( 'plugins_loaded', 'WReader\initialize' );
 
 
 function activate() {
@@ -28,7 +28,7 @@ function uninstall() {
 }
 
 function add_menu_entry() {
-	add_submenu_page( 'options-general.php', PLUGIN_NAME, PLUGIN_NAME, 'manage_options', \MultiFeedReader\Settings\HANDLE, 'MultiFeedReader\Settings\initialize' );
+	add_submenu_page( 'options-general.php', PLUGIN_NAME, PLUGIN_NAME, 'manage_options', \WReader\Settings\HANDLE, 'WReader\Settings\initialize' );
 }
 
 function shortcode( $attributes ) {
@@ -89,12 +89,12 @@ function generate_html_by_template( $template, $limit ) {
 	    }
 	    return ( $a[ 'pubDateTime' ] > $b[ 'pubDateTime' ] ) ? -1 : 1;
 	} );
-	
+
 	if ( $limit > 0 ) {
 		$feed_items = array_slice( $feed_items, 0, $limit );
 	}
 	$timer->stop( 'sort' );
-	
+
 	$timer->start( 'render' );
 	$out = $collection->before_template;
 	foreach ( $feed_items as $item ) {
@@ -114,12 +114,12 @@ function generate_html_by_template( $template, $limit ) {
 			$timer->get( 'render', 'range_human' )
 		)
 	);
-	
+
 	return $out;
 }
 
 function get_content_directory() {
-	return apply_filters( 'mfr_content_directory', WP_CONTENT_DIR . '/multi-feed-reader' );
+	return apply_filters( 'mfr_content_directory', WP_CONTENT_DIR . '/wreader' );
 }
 
 function get_log_directory() {
@@ -132,7 +132,7 @@ function get_cache_directory() {
 
 /**
  * Log a message to the logfile.
- * 
+ *
  * @param  string $message
  * @param  string $type    Message category. Default: INFO
  * @return void
@@ -162,7 +162,7 @@ function maybe_create_content_directories( $filter = 'all' ) {
 			return;
 
 		if ( ! mkdir( $dir, 0755, true ) )
-			wp_die( 'MultiFeedReader: Can\'t create directory "' . $dir . '" :(' );
+			wp_die( 'WReader: Can\'t create directory "' . $dir . '" :(' );
 	};
 
 	if ( $filter === 'all' ) {

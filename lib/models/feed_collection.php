@@ -1,5 +1,5 @@
 <?php
-namespace MultiFeedReader\Models;
+namespace WReader\Models;
 
 class FeedCollection extends Base
 {
@@ -37,14 +37,14 @@ class FeedCollection extends Base
 	 * Relationship: FeedCollection has many Feeds
 	 */
 	public function feeds() {
-		return \MultiFeedReader\Models\Feed::find_by_feed_collection_id( $this->id );
+		return \WReader\Models\Feed::find_by_feed_collection_id( $this->id );
 	}
 	
 	/**
 	 * Delete cached HTML.
 	 */
 	public function delete_cache() {
-	   delete_transient( \MultiFeedReader\get_cache_key( $this->name ) );
+	   delete_transient( \WReader\get_cache_key( $this->name ) );
 	}
 }
 
@@ -53,4 +53,4 @@ FeedCollection::property( 'name', 'VARCHAR(255)' );
 FeedCollection::property( 'before_template', 'TEXT' );
 FeedCollection::property( 'body_template', 'TEXT' );
 FeedCollection::property( 'after_template', 'TEXT' );
-// FeedCollection::has_many( 'MultiFeedReader\Models\Feed', array( 'plural' => 'feeds' ) );
+// FeedCollection::has_many( 'WReader\Models\Feed', array( 'plural' => 'feeds' ) );

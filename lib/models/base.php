@@ -1,5 +1,5 @@
 <?php
-namespace MultiFeedReader\Models;
+namespace WReader\Models;
 
 abstract class Base
 {

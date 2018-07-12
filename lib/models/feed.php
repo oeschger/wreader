@@ -1,5 +1,5 @@
 <?php
-namespace MultiFeedReader\Models;
+namespace WReader\Models;
 
 class Feed extends Base
 {
@@ -33,7 +33,7 @@ class Feed extends Base
 	public function parse() {
 		require_once ABSPATH . WPINC . '/class-simplepie.php';
 
-		$timer = new \MultiFeedReader\Timer();
+		$timer = new \WReader\Timer();
 
 		$timer->start( 'load' );
 		$feed = new \SimplePie();
@@ -46,7 +46,7 @@ class Feed extends Base
 		$feed->set_feed_url( $this->url );
 		$feed->set_cache_duration( 3600 ); // 1 hour is default
 		$feed->enable_order_by_date( false ); // we will sort later manually
-		$feed->set_cache_location( \MultiFeedReader\get_cache_directory() );
+		$feed->set_cache_location( \WReader\get_cache_directory() );
 		$feed->init();
 		$timer->stop( 'load' );
 
@@ -103,7 +103,7 @@ class Feed extends Base
 		}
 		$timer->stop( 'parse' );
 
-		\MultiFeedReader\write_log(
+		\WReader\write_log(
 			sprintf(
 				'Fetched and parsed Feed "%s". load: %ss, parse: %ss',
 				$this->url,
@@ -148,4 +148,4 @@ class Feed extends Base
 Feed::property( 'id', 'INT NOT NULL AUTO_INCREMENT PRIMARY KEY' );
 Feed::property( 'feed_collection_id', 'INT' );
 Feed::property( 'url', 'VARCHAR(255)' );
-// Feed::belongs_to( 'MultiFeedReader\Models\FeedCollection' );
+// Feed::belongs_to( 'WReader\Models\FeedCollection' );

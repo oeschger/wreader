@@ -1,6 +1,6 @@
-=== Multi Feed Reader ===
+=== WReader ===
 Contributors: eteubert
-Donate link: https://flattr.com/thing/474620/WordPress-Plugin-Multi-Feed-Reader
+Donate link: https://flattr.com/thing/474620/WordPress-Plugin-wreader
 Tags: feed, rss, archive, shortcode, custom, template, html, customizable
 Requires at least: 3.0
 Tested up to: 3.7.5
@@ -14,14 +14,14 @@ This plugin was created with the iTunes Podcast Feed in mind. However, you can f
 
 = Quick Start =
 
-Create a template "myfeeds" in `Settings > Multi Feed Reader`.
+Create a template "myfeeds" in `Settings > WReader`.
 Add your Feeds.
 Create a page and paste in one of these shortocdes:
 
-	[multi-feed-reader template="myfeeds"]
-	[multi-feed-reader template="myfeeds" limit="10"]
-	[multi-feed-reader template="myfeeds" cachetime="300"]
-	
+	[wreader template="myfeeds"]
+	[wreader template="myfeeds" limit="10"]
+	[wreader template="myfeeds" cachetime="300"]
+
 Enjoy :)
 
 = Parameters =
@@ -38,7 +38,7 @@ To clear the cache, call the site with parameter `?nocache=1`. So if your site i
 = Placeholders =
 
 You can specify a custom template to display the archive elements.
-Go to `Settings > Multi Feed Reader` for plugin preferences.
+Go to `Settings > WReader` for plugin preferences.
 Use HTML and any of the following template placeholders.
 
 - `%TITLE%` - Episode title (&lt;title&gt;).
@@ -54,7 +54,7 @@ Use HTML and any of the following template placeholders.
 - `%ENCLOSURE%` - Url of first episode enclosure (&lt;enclosure&gt; url attribute).
 - `%THUMBNAIL%` - Thumbnail tag in original size (&lt;itunes:image&gt;).
 - `%THUMBNAIL|...x...%` - Same as above but with certain dimensions. Example: `%THUMBNAIL|75x75%`.
-- `%DATE%` - Episode publish date (&lt;pubDate&gt;) in WordPress default format. 
+- `%DATE%` - Episode publish date (&lt;pubDate&gt;) in WordPress default format.
 - `%DATE|...%` - Same as above but in a custom format. Example: `%DATE|Y/m/d%`.
 
 Access data from app store feeds:
@@ -77,10 +77,10 @@ Use these placeholders to access global feed data:
 
 == Installation ==
 
-1. Upload the `multi-feed-reader` directory to the `/wp-content/plugins/` directory
+1. Upload the `wreader` directory to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Go to `Settings > Multi Feed Reader` and create a template
-1. Place `[multi-feed-reader template="mytemplate"]` in your post or page
+1. Go to `Settings > WReader` and create a template
+1. Place `[wreader template="mytemplate"]` in your post or page
 
 == Frequently Asked Questions ==
 
@@ -92,7 +92,7 @@ Please ask your hoster to update, kindly.
 
 = How many feeds can I add to a collection? =
 
-That depends on two aspects: Feed response time and feed size. Each feed you add increases the time needed to display the final page. The results are cached, so most of the time the page will render in a snap. If you'd like to see how long the page rendering takes when the cache is expired, have a look at the logfile (/wp-content/multi-feed-reader/reader.log). Look for the last line containing "template generated". It contains the durations.
+That depends on two aspects: Feed response time and feed size. Each feed you add increases the time needed to display the final page. The results are cached, so most of the time the page will render in a snap. If you'd like to see how long the page rendering takes when the cache is expired, have a look at the logfile (/wp-content/wreader/reader.log). Look for the last line containing "template generated". It contains the durations.
 
 Rule of thumb: On average, one feed requires one second. 5 Feeds are fine. 10 might work. 20 is probably too much. Your mileage may vary :)
 
@@ -100,7 +100,7 @@ Rule of thumb: On average, one feed requires one second. 5 Feeds are fine. 10 mi
 
 That would be awesome!
 
-Visit https://github.com/eteubert/multi-feed-reader, fork the project, add your feature and create a Pull Request. I'll be happy to review and add your changes.
+Visit https://github.com/eteubert/wreader, fork the project, add your feature and create a Pull Request. I'll be happy to review and add your changes.
 
 == Screenshots ==
 

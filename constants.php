@@ -1,12 +1,12 @@
 <?php
-namespace MultiFeedReader;
+namespace WReader;
 
 const DEFAULT_TEMPLATE = 'default';
 const DEFAULT_LIMIT = 15;
 const DEFAULT_CACHETIME = 300;
-const SHORTCODE = 'multi-feed-reader';
+const SHORTCODE = 'wreader';
 
-namespace MultiFeedReader\Settings;
+namespace WReader\Settings;
 
 const DEFAULT_BEFORE_TEMPLATE = '<table>
 <thead>
