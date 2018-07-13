@@ -43,7 +43,6 @@ Use HTML and any of the following template placeholders.
 - `%SUBTITLE%` - Item subtitle (&lt;itunes:subtitle&gt;).
 - `%CONTENT%` - Item content (&lt;content:encoded&gt;).
 - `%CONTENT|...%` - Same as above but truncated to the given amount of words.
-- `%DURATION%` - Item duration (&lt;itunes:duration&gt;).
 - `%SUMMARY%` - Item summary (&lt;itunes:summary&gt;).
 - `%LINK%` - Item link (&lt;link&gt;).
 - `%DESCRIPTION%` - Item description (&lt;itunes:description&gt; or &lt;description&gt;).
