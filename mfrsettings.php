@@ -250,26 +250,15 @@ function display_help_metabox( $tabs ) {
            		<pre>%SUBTITLE%</pre><br/><?php echo __( 'Episode subtitle (&lt;itunes:subtitle&gt;).', 'wreader' ); ?><br/><br/>
            		<pre>%CONTENT%</pre><br/><?php echo __( 'Episode content (&lt;content:encoded&gt;).', 'wreader' ); ?><br/><br/>
            		<pre>%CONTENT|...%</pre><br/><?php echo __( 'Same as above but truncated to the given amount of words.', 'wreader' ); ?><br/><br/>
-           		<!--pre>%DURATION%</pre><br/><?php echo __( 'Episode duration (&lt;itunes:duration&gt;).', 'wreader' ); ?><br/><br/-->
            		<pre>%SUMMARY%</pre><br/><?php echo __( 'Episode summary (&lt;itunes:summary&gt;).', 'wreader' ); ?><br/><br/>
            		<pre>%LINK%</pre><br/><?php echo __( 'Episode link (&lt;link&gt;).', 'wreader' ); ?><br/><br/>
-           		<!--pre>%GUID%</pre><br/><?php echo __( 'Episode Globally Unique Identifier (&lt;guid&gt;)', 'wreader' ); ?><br/><br/-->
            		<pre>%DESCRIPTION%</pre><br/><?php echo __( 'Episode description (&lt;itunes:description&gt;).', 'wreader' ); ?><br/><br/>
            		<pre>%DESCRIPTION|...%</pre><br/><?php echo __( 'Same as above but truncated to the given amount of words.', 'wreader' ); ?><br/><br/>
-           		<!--pre>%ENCLOSURE%</pre><br/><?php echo __( 'Url of first episode enclosure (&lt;enclosure&gt; url attribute).', 'wreader' ); ?><br/><br/-->
             	<pre>%THUMBNAIL%</pre><br/><?php echo __( 'Thumbnail tag in original size (&lt;itunes:image&gt;).', 'wreader' ); ?><br/><br/>
             	<pre>%THUMBNAIL|...x...%</pre><br/><?php echo __( 'Same as above but with certain dimensions. Example: <pre>%THUMBNAIL|75x75%</pre>.', 'wreader' ); ?><br/><br/>
             	<pre>%DATE%</pre><br/><?php echo __( 'Episode publish date (&lt;pubDate&gt;) in WordPress default format. ', 'wreader' ); ?><br/><br/>
             	<pre>%DATE|...%</pre><br/><?php echo __( 'Same as above but in a custom format. Example: <pre>%DATE|Y/m/d%</pre>.', 'wreader' ); ?><br/><br/>
 			</p>
-			<!--strong><?php echo __( 'App Store data', 'wreader' ); ?></strong>
-			<p>
-				<pre>%APPNAME%</pre><br/><?php echo __( 'App name.', 'wreader' ); ?><br/><br/>
-				<pre>%APPPRICE%</pre><br/><?php echo __( 'App price.', 'wreader' ); ?><br/><br/>
-				<pre>%APPIMAGE%</pre><br/><?php echo __( 'App Icon as HTML image.', 'wreader' ); ?><br/><br/>
-				<pre>%APPARTIST%</pre><br/><?php echo __( 'App artist / publisher.', 'wreader' ); ?><br/><br/>
-				<pre>%APPRELEASE%</pre><br/><?php echo __( 'App release date in WordPress format.', 'wreader' ); ?><br/><br/>
-			</p-->
 			<strong><?php echo __( 'Global feed data', 'wreader' ); ?></strong>
 			<p>
 				<pre>%FEEDTITLE%</pre><br/><?php echo __( 'Feed title (&lt;title&gt;).', 'wreader' ); ?><br/><br/>

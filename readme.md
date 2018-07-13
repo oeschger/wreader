@@ -39,29 +39,19 @@ You can specify a custom template to display the archive elements.
 Go to `Settings > WReader` for plugin preferences.
 Use HTML and any of the following template placeholders.
 
-- `%TITLE%` - Episode title (&lt;title&gt;).
-- `%SUBTITLE%` - Episode subtitle (&lt;itunes:subtitle&gt;).
-- `%CONTENT%` - Episode content (&lt;content:encoded&gt;).
+- `%TITLE%` - Item title (&lt;title&gt;).
+- `%SUBTITLE%` - Item subtitle (&lt;itunes:subtitle&gt;).
+- `%CONTENT%` - Item content (&lt;content:encoded&gt;).
 - `%CONTENT|...%` - Same as above but truncated to the given amount of words.
-- `%DURATION%` - Episode duration (&lt;itunes:duration&gt;).
-- `%SUMMARY%` - Episode summary (&lt;itunes:summary&gt;).
-- `%LINK%` - Episode link (&lt;link&gt;).
-- `%GUID%` - Episode Globally Unique Identifier (&lt;guid&gt;)
-- `%DESCRIPTION%` - Episode description (&lt;itunes:description&gt; or &lt;description&gt;).
+- `%DURATION%` - Item duration (&lt;itunes:duration&gt;).
+- `%SUMMARY%` - Item summary (&lt;itunes:summary&gt;).
+- `%LINK%` - Item link (&lt;link&gt;).
+- `%DESCRIPTION%` - Item description (&lt;itunes:description&gt; or &lt;description&gt;).
 - `%DESCRIPTION|...%` - Same as above but truncated to the given amount of words.
-- `%ENCLOSURE%` - Url of first episode enclosure (&lt;enclosure&gt; url attribute).
 - `%THUMBNAIL%` - Thumbnail tag in original size (&lt;itunes:image&gt;).
 - `%THUMBNAIL|...x...%` - Same as above but with certain dimensions. Example: `%THUMBNAIL|75x75%`.
-- `%DATE%` - Episode publish date (&lt;pubDate&gt;) in WordPress default format.
+- `%DATE%` - Item publish date (&lt;pubDate&gt;) in WordPress default format.
 - `%DATE|...%` - Same as above but in a custom format. Example: `%DATE|Y/m/d%`.
-
-Access data from app store feeds:
-
-- %APPNAME% - App name.
-- %APPPRICE% - App price.
-- %APPIMAGE% - App Icon as HTML image.
-- %APPARTIST% - App artist / publisher.
-- %APPRELEASE% - App release date in WordPress format.
 
 Use these placeholders to access global feed data:
 
