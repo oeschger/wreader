@@ -9,6 +9,8 @@ namespace WReader\Settings;
 use WReader\Models\FeedCollection as FeedCollection;
 use WReader\Models\Feed as Feed;
 
+/* test commit */
+
 /**
  * Postbox helper function.
  *
